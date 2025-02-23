@@ -1,0 +1,685 @@
+@charset "UTF-8";
+/* ------------------------------
+	事業案内
+------------------------------ */
+/* STEP */
+.stepBlock {
+	background: #f2f2f2;
+	border-radius: 15px;
+}
+.stepBlock .image_icon {
+	width: 100px;
+}
+.stepBlock .cms_text h4 {
+	line-height: 1.25;
+	margin-bottom: 10px;
+}
+.stepBlock .cms_text h4 span {
+	color: #e60012;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	display: block;
+	margin-right: 5px;
+}
+.icon_arrow_down {
+	position: relative;
+}
+.icon_arrow_down::after {
+	content: "";
+	display: block !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -30px;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 12px solid transparent;
+	border-left: 12px solid transparent;
+	border-top: 12px solid #e60012;
+	border-bottom: 0;
+}
+/* STEP 技術支援 */
+.step_supportBlock .cms_text {
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 1.5;
+}
+.step_supportBlock .cms_text .red {
+	font-size: 1.6rem;
+	color: #e60012;
+}
+.step_grayBlock .cms_text {
+	background: #757b82;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 40px;
+	border-radius: 15px;
+}
+/* h2内アイコン */
+.title-icon img {
+	max-width: 43px;
+	margin-right: 10px;
+	vertical-align: top;
+	margin-top: .2em;
+}
+/* お問い合わせ */
+.contact {
+	border-top: 1px solid #e2e4e6;
+	padding: 80px 0 0;
+}
+.contact h2 {
+	position: relative;
+	padding-left: 120px;
+	line-height: 1;
+}
+.contact h2::after {
+	display: none;
+}
+.contact h2::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 88px;
+	height: 88px;
+	left: 0;
+	top: 0;
+	bottom: inherit;
+	margin: auto;
+}
+.contact h2 .en {
+	display: block;
+	font-size: 11.5rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	margin-bottom: 15px;
+	letter-spacing: -0.3rem;
+}
+.contact h2 .ja {
+	display: block;
+	font-size: 2.5rem;
+	font-weight: bold;
+	position: relative;
+	padding-left: 18px;
+	line-height: 1.4;
+}
+.contact h2 .ja::before {
+	display: inline-block;
+	content: "●";
+	color: #E60012;
+	font-size: 40%;
+	vertical-align: middle;
+	position: absolute;
+	top: 9px;
+	left: 4px;
+}
+/* 工業用塗料・塗装ソリューション */
+.contact.technicalsuport h2::before {
+	background: url('../assets/icon_mail_technicalsuport.svg') no-repeat center / 100%;
+}
+.contact.technicalsuport h2 .ja::before {
+	color: #e09353;
+}
+.contact.technicalsuport .btn a::after {
+	background: url('../assets/icon_arrow_technicalsuport.svg') no-repeat center / 100%;
+}
+.contact.technicalsuport .btn a:hover {
+	color: #e09353;
+	border: 1px solid #e09353;
+}
+/* 塗装 */
+.contact.painting h2::before {
+	background: url('../assets/icon_mail_painting.svg') no-repeat center / 100%;
+}
+.contact.painting h2 .ja::before {
+	color: #6D9B62;
+}
+.contact.painting .btn a::after {
+	background: url('../assets/icon_arrow_painting.svg') no-repeat center / 100%;
+}
+.contact.painting .btn a:hover {
+	color: #6D9B62;
+	border: 1px solid #6D9B62;
+}
+/* ロボット */
+.contact.robot h2::before {
+	background: url('../assets/icon_mail_robot.svg') no-repeat center / 100%;
+}
+.contact.robot h2 .ja::before {
+	color: #5E9CAA;
+}
+.contact.robot .btn a::after {
+	background: url('../assets/icon_arrow_robot.svg') no-repeat center / 100%;
+}
+.contact.robot .btn a:hover {
+	color: #5E9CAA;
+	border: 1px solid #5E9CAA;
+}
+/* 画像3分の2とテキスト3分の1 ブロック */
+.beltBlock .cms_text {
+	background: #f2f2f2;
+	line-height: 1.5;
+    font-size: 1.5rem;
+}
+/* ------------------------------
+ PC用限定CSS
+------------------------------ */
+@media print, screen and (min-width: 768px) {
+	/* 事業案内リンクブロック */
+	.cms_block.businessList::after {
+		display: none;
+	}
+	.businessList {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.businessList .cms_image {
+		width: 670px;
+		margin-bottom: 0;
+	}
+	.businessList .text {
+		width: 420px;
+		line-height: 1.5;
+	}
+	.businessList h4 {
+		font-size: 2.8rem;
+		margin-bottom: 20px;
+	}
+	.businessList h5 {
+		font-size: 2.3rem;
+		margin-bottom: 15px;
+	}
+	.businessList .btn {
+		margin-top: 30px;
+	}
+	/* STEP */
+	.stepBlock {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.cms_block.stepBlock::after {
+		display: none;
+	}
+	.stepBlock.icon_arrow_down {
+		margin-bottom: 50px;
+	}
+	.stepBlock .image_icon {
+		margin-bottom: 0;
+		margin-left: 45px;
+	}
+	.stepBlock .cms_text {
+		width: 522px;
+		margin-bottom: 0;
+		line-height: 1.35;
+	}
+	.stepBlock .cms_text h4 span {
+		font-size: 1.6rem;
+	}
+	.stepBlock .image_box {
+		width: 400px;
+	}
+	.stepBlock .image_box img {
+		border-radius: 0 15px 15px 0;
+	}
+	/* STEP 技術支援 */
+	.step_supportBlock {
+		background: #f2f2f2;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+	}
+	.step_supportBlock.icon_arrow_down {
+		margin-bottom: 50px;
+	}
+	.step_supportBlock .image_box {
+		width: 315px;
+		margin-bottom: 0;
+	}
+	.step_supportBlock .image_box img {
+		border-radius: 15px 0 0 15px;
+	}
+	.step_supportBlock .cms_text {
+		width: 824px;
+		padding: 50px;
+	}
+	/* お問い合わせ */
+	.contact h2 {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.contact h2 .ja {
+		font-size: 2rem;
+	}
+	.contact h2 .en {
+		font-size: 5.3rem;
+	}
+	.cms_block.wide.contact .cms_text.w1-3 {
+		width: 440px;
+		margin-left: initial;
+		margin-right: initial;
+		margin-bottom: 0;
+	}
+	.cms_block.wide.contact .cms_text.w2-3 {
+		margin-top: 15px;
+		width: 480px;
+		margin-left: initial;
+		margin-right: initial;
+	}
+	/* 画像3分の2とテキスト3分の1 ブロック */
+	.beltBlock {
+		display: flex;
+	}
+	.beltBlock .cms_image {
+		width: 660px;
+		border-radius: 15px 0 0 15px;
+		margin-bottom: 0;
+	}
+	.beltBlock .cms_image img {
+		border-radius: 15px 0 0 15px;
+	}
+	.beltBlock .cms_text {
+		width: 480px;
+		border-radius: 0 15px 15px 0;
+		padding: 50px ;
+		align-content: center;
+		display: grid;
+	}
+	.beltBlock .cms_image.order2 img {
+		border-radius: 0 15px 15px 0;
+	}
+	.beltBlock .cms_text.order1 {
+		border-radius: 15px 0 0 15px;
+	}
+
+	/* 事業内容ブロック */
+	.businessBlock {
+		background: #f2f2f2;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+	.businessBlock .image_box {
+		width: 660px;
+		margin-bottom: 0;
+	}
+	.businessBlock .image_box.cms_image,
+	.businessBlock .text.cms_text {
+		margin-bottom: 0;
+	}
+	.businessBlock .text {
+		padding: 50px;
+		width: calc(100% - 660px);
+		margin-bottom: 0;
+	}
+}
+/* ------------------------------
+ スマホ用コード
+------------------------------ */
+@media screen and (max-width: 767px) {
+	/* 事業案内リンクブロック */
+	.businessList h4 {
+		font-size: 2.4rem;
+		margin-bottom: 20px;
+	}
+	.businessList .btn {
+		margin-top: 25px;
+	}
+	.businessList .cms_image.r10 {
+		margin: 0 -5.5% 40px;
+	}
+	.businessList .cms_image.r10 img {
+		border-radius: 0;
+	}
+	/* 画像3分の2とテキスト3分の1 ブロック */
+	.beltBlock .cms_image {
+		border-radius: 15px 15px 0 0;
+		margin-bottom: 0;
+	}
+	.beltBlock .cms_image img {
+		border-radius: 15px 15px 0 0;
+	}
+	.beltBlock .cms_text {
+		border-radius: 0 0 15px 15px;
+		padding: 25px;
+	}
+	/* 事業内容ブロック */
+	.businessBlock {
+		background: #f2f2f2;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+	.businessBlock .text {
+		padding: 0 25px;
+	}
+	/* STEP */
+	.stepBlock {
+		padding: 30px 0 0;
+	}
+	.stepBlock .image_icon {
+		margin: 0 auto 25px;
+	}
+	.stepBlock .cms_text {
+		width: 90%;
+		margin: 0 auto 20px;
+	}
+	.stepBlock .cms_text h4 {
+		text-align: center;
+	}
+	.stepBlock .cms_text h4 span {
+		display: block;
+		font-size: 1.6rem;
+		margin-bottom: 5px;
+	}
+	.stepBlock .image_box img {
+		border-radius: 0 0 15px 15px;
+	}
+	/* STEP 技術支援 */
+	.step_supportBlock {
+		background: #f2f2f2;
+		border-radius: 15px;
+	}
+	.step_supportBlock.icon_arrow_down {
+		margin-bottom: 50px;
+	}
+	.step_supportBlock .image_box {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.step_supportBlock .image_box img {
+		border-radius: 15px 15px 0 0;
+	}
+	.step_supportBlock .cms_text {
+		width: 100%;
+		padding: 25px;
+	}
+	.step_supportBlock .cms_text br {
+		display: none;
+	}
+	.step_supportBlock .cms_text .red {
+		display: block;
+		margin-bottom: 10px;
+	}
+	/* お問い合わせ */
+	.contact.flexBox {
+		display: block !important;
+		padding: 60px 0 20px;
+	}
+	.contact h2 {
+		padding-left: 85px;
+		padding-bottom: 0;
+		margin: 0 auto;
+		width: fit-content;
+	}
+	.contact h2::before {
+		width: 66px;
+		height: 66px;
+	}
+	.contact h2 .en {
+		font-size: 4rem;
+	}
+	.contact h2 .ja {
+		font-size: 1.7rem;
+	}
+	.contact .cms_text.w2-3 {
+		text-align: center;
+	}
+}
+
+/* ------------------------------
+ 開閉コンテンツ
+------------------------------ */
+.toggle {
+	padding: 35px 30px 35px 0;
+	margin-bottom: 0 !important;
+	position: relative;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.8rem;
+	border-bottom: 1px solid #dddddd;
+}
+.cms_text.toggle_box {
+	margin-bottom: 0;
+}
+.toggle_box {
+	display:none;
+	padding: 35px 40px;
+	background: #f2f2f2;
+	position: relative;
+	border-bottom: 1px solid #dddddd;
+}
+/* -- Q & A -- */
+.qa .toggle {
+	padding: 35px 30px 35px 40px;
+}
+.qa .toggle p:before{
+	content:"Q";
+	color: #84929c;
+	font-weight: 600;
+	font-size: 3rem;
+	font-family: "Poppins", sans-serif;
+	display: block;
+	text-indent: 0;
+	position: absolute;
+	left: 0;
+	top: 23px;
+}
+.qa .toggle_box {
+	padding: 35px 30px 35px 75px;
+}
+.qa .toggle_box p {
+	position: relative;
+}
+.qa .toggle_box p:before{
+	content:"A";
+	color: #e60012;
+	font-weight: 600;
+	font-size: 3rem;
+	font-family: "Poppins", sans-serif;
+	display: block;
+	text-indent: 0;
+	position: absolute;
+	left: -35px;
+	top: -14px;
+}
+/* -- 塗替え状態の目安 -- */
+.guidelineBox .image img {
+	border-radius: 10px;
+}
+.guidelineBox .text h5 {
+	font-size: 1.6rem;
+	margin-bottom: 0;
+}
+.guidelineBox .text h5::before {
+	display: inline-block;
+	content: "●";
+	color: #E60012;
+	font-size: 60%;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+.guideline_number {
+	color: #84929c;
+	font-weight: 600;
+	font-size: 2.5rem;
+	font-family: "Poppins", sans-serif;
+	display: inline-block;
+	margin-right: 15px;
+	line-height: 1;
+	vertical-align: -2px;
+}
+/* -- +-アイコン -- */
+.toggle::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 24px;
+	height: 24px;
+	background: url('../assets/icon_plus.svg') no-repeat;
+	background-size: cover;
+}
+.toggle.active::after {
+	background: url('../assets/icon_minus.svg') no-repeat;
+	background-size: cover;
+}
+/* ------------------------------
+ PC用限定CSS
+------------------------------ */
+@media print, screen and (min-width: 768px) {
+	.guidelineBox .image {
+		width: 450px;
+	}
+	.guidelineBox .text {
+		width: 570px;
+	}
+}
+/* ------------------------------
+ スマホ用コード
+------------------------------ */
+@media screen and (max-width: 767px) {
+	.guidelineBox .image {
+		margin-bottom: 20px;
+	}
+	.toggle {
+		padding: 14px 25px 14px 5px;
+	}
+	.toggle::after {
+		width: 20px;
+		height: 20px;
+	}
+	.toggle p{
+		font-size: 1.6rem;
+	}
+	.toggle_box{
+		padding: 20px;
+	}
+	.qa .toggle {
+		padding: 15px 30px 15px 40px;
+	}
+	.qa .toggle_box {
+		padding: 15px 15px 15px 40px;
+	}
+	.qa .toggle p:before{
+		font-size: 2.4rem;
+		left: 12px;
+		top: 8px;
+	}
+	.qa .toggle_box p:before{
+		font-size: 2.4rem;
+		left: -26px;
+		top: -8px;
+	}
+}
+/* ウチゲンの多彩な商品・工法ラインナップ */
+.contents .graph_table table {
+	border-right: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	width: 100% !important;
+	text-align: center;
+	margin-top: 10px;
+}
+.contents .graph_table table tr th {
+	border-top: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	padding: 10px;
+	font-weight: normal;
+	width: 25%;
+	font-size: 1.2rem;
+  	line-height: 1.35;
+}
+.contents .graph_table table tr td {
+	border-left: 1px solid #dddddd;
+	padding: 10px;
+	background: #fff;
+}
+
+/* ------------------------------
+ 防水工事（PC）
+------------------------------ */
+/* colorBox-a 中12分割 */
+.colorBox-a.halfBox {
+	padding: 45px 50px 60px;
+}
+.colorBox-a.halfBox .w1-2 .cms_caption_b {
+    margin-top: 20px;
+}
+.colorBox-a.halfBox .w1-2 .cms_caption_b h3 {
+	margin-bottom: 15px;
+}
+.colorBox-a.halfBox .w1-2 .cms_caption_b h6 {
+	margin-bottom: 12px;
+	line-height: 1.45;
+}
+.colorBox-a.halfBox .cms_image.w1-2 .cms_caption_b ul {
+	margin-bottom: 10px;
+}
+.colorBox-a.halfBox .cms_image.w1-2 .cms_caption_b ul > li {
+	font-weight: 500;
+}
+@media print, screen and (min-width: 768px) {
+	.colorBox-a.halfBox .w1-2 {
+		width: 495px;
+	}
+}
+/* ------------------------------
+ 防水工事（SP）
+------------------------------ */
+@media screen and (max-width: 767px) {
+	.colorBox-a.halfBox {
+		padding: 35px 20px;
+	}
+}
+
+/* --------------------------------------
+ 住宅・アパート ・マンション向け塗装工事（PC）
+-------------------------------------- */
+.cms_image.before,
+.cms_image.after {
+	position: relative;
+}
+.cms_image.before::before,
+.cms_image.after::before {
+	content: "Before";
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #415e87;
+	color: #fff;
+	line-height: 80px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Inter", serif;
+}
+.cms_image.after::before {
+	content: "After";
+	background-color: #e60012;
+	font-family: "Inter", serif;
+}
+/* --------------------------------------
+ 住宅・アパート ・マンション向け塗装工事（SP）
+-------------------------------------- */
+@media screen and (max-width: 767px) {
+	.cms_image.before::before,
+	.cms_image.after::before {
+		top: 10px;
+		left: 10px;
+		width: 50px;
+		height: 50px;
+		font-size: 1.2rem;
+		line-height: 50px;
+	}
+}

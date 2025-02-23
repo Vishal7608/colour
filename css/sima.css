@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+/* ------------------------------
+ リンク
+------------------------------ */
+/* PDF */
+a.cms_pdf,
+.cms_pdf a{
+	display: inline-block;
+	text-decoration: underline;
+	padding-left: 33px;
+	background: url(../img/icon_pdf.svg)no-repeat 0 center / 23px 26px;
+	color: #495b6b;
+}
+/* ワード */
+a.cms_doc,
+.cms_doc a{
+	display: inline-block;
+	text-decoration: underline;
+	padding-left: 33px;
+	background: url(../img/icon_doc.svg) no-repeat 0 center / 23px 26px;
+	color: #495b6b;
+}
+/* パワーポイント */
+a.cms_ppt,
+.cms_ppt a {
+	display: inline-block;
+	text-decoration: underline;
+	padding-left: 33px;
+	background: url(../img/icon_ppt.svg) no-repeat 0 center / 23px 26px;
+	color: #495b6b;
+}
+/* エクセル */
+a.cms_xls,
+.cms_xls a {
+	display: inline-block;
+	text-decoration: underline;
+	padding-left: 33px;
+	background: url(../img/icon_xls.svg) no-repeat 0 center / 23px 26px;
+	color: #495b6b;
+}
+.cms_pdf a.cms_blank,
+.cms_doc a.cms_blank,
+.cms_ppt a.cms_blank,
+.cms_xls a.cms_blank {
+	background: none;
+}
+/**/
+
+.cms_link a {
+	display: inline-block;
+	color: #1A1A1A;
+	font-weight: bold;
+}
+.cms_link a:hover {
+	color: #E60012;
+	opacity: 1;
+}
+.cms_link a:not([target="_blank"]) {
+	
+}
+.cms_block:not(.btn) .cms_link:not(.btn) a:not([target="_blank"])::after {
+	content: "";
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url('../img/icon_circle_arrow.svg') no-repeat;
+	vertical-align: middle;
+	margin-left: 6px;
+	margin-bottom: 3px;
+}
+.cms_block:not(.btn) .cms_link a.cms_blank[target="_blank"] {
+	color: #E60012;
+    text-decoration: underline;
+}
+.cms_block:not(.btn) .cms_link a[target="_blank"] {
+	background: none;
+	margin-right: 0;
+	padding-right: 0;
+}
+.cms_block:not(.btn) .cms_link a[target="_blank"]::after {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-left: 5px;
+	background: url('../img/icon_blank.svg') no-repeat right center / 11px;
+	
+}
+.cms_link a:hover,
+a.cms_link:hover {
+	text-decoration: underline;
+}
+.cms_link + .cms_link {
+	margin-top: 10px;
+}
+.linkBlockLower .cms_link + .cms_link,
+.pageLink .cms_link + .cms_link,
+.btnBox .cms_link + .cms_link,
+.flexBox.div2 .cms_link + .cms_link {
+	margin-top: 0;
+}
+/*テキストブロック*/
+.cms_text:not(.btn) > a {
+	color: #506472;
+	text-decoration: underline;
+}
+.cms_text:not(.btn) > a[target="_blank"]::after,
+.cms_text:not(.btn) a.cms_inner_blank::after {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url('../img/icon_blank.svg') no-repeat center / 11px;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+@media print, screen and (min-width: 768px) {
+	a.cms_link:hover,
+	.cms_link a:hover,
+	a.cms_pdf:hover,
+	.cms_pdf a:hover,
+	a.cms_doc:hover,
+	.cms_doc a:hover,
+	a.cms_xls:hover,
+	.cms_xls a:hover,
+	a.cms_ppt:hover,
+	.cms_ppt a:hover {
+		text-decoration: none;
+	}
+}
+/* ----------------------
+ スマホ用コード（リンク）
+---------------------- */
+@media screen and (max-width: 767px) {
+	.cms_link a {
+		font-size: 1.9rem;
+	}
+}
+/* ----------------------------------------------
+	■回り込み
+------------------------------------------------- */
+* + .cms_cf,
+.cms_block:after,
+.cms_clear_before {
+	display: block;
+	clear: both;
+	content: '';
+}
+.cms_cf:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.cms_clear {
+	clear: both;
+}
+.cms_clear_block {
+	font-size: 0 !important;
+	line-height: 0 !important;
+	clear: both !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+}
+
+/* ----------------------------------------------
+	■マージン
+------------------------------------------------- */
+.cms_block {
+	margin-bottom: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cms_block:last-child,
+.cms_text:last-child,
+.cms_image:last-child {
+	margin-bottom: 0 !important;
+}
+.cms_image {
+	margin-bottom: 40px;
+}
+.cms_image.cms_fl,
+.cms_image.cms_fr  {
+	text-align: left;
+}
+.cms_text {
+	margin-bottom: 40px;
+ 
+}
+
+.cms_fl {
+	float: left;
+}
+.cms_fr {
+	float: right;
+}
+.cms_caption_t {
+	margin-bottom: 20px;
+}
+.cms_caption_b {
+	margin-top: 12px;
+}
+.fl + .fr,
+.cms_fl + .cms_fr,
+.cms_fl + .fr,
+.fl + .cms_fr {
+	margin-left: 0;
+}
+.cms_cf + .cms_cf {
+	margin-top: -.75em;
+}
+
+/* ----------------------------------------------
+ ■配置
+------------------------------------------------- */
+.cms_center {
+	text-align: center;
+}
+.cms_left {
+	text-align: left;
+}
+.cms_right {
+	text-align: right;
+}
+.cms_center .cms_caption_t,
+.tal .cms_caption_t,
+.cms_center .cms_caption_b,
+.tal .cms_caption_b {
+	text-align: left;
+}
+.tac .cms_caption_t,
+.tac .cms_caption_b {
+	text-align: center !important;
+}
+.tar .cms_caption_t,
+.tar .cms_caption_b {
+	text-align: right !important;
+}
+
+/* ----------------------------------------------
+ ■ボーダー
+------------------------------------------------- */
+img.cms_border{
+	border: solid 1px #c7d1d4;
+}
+
+/* ----------------------------------------------
+ ■PDFダウンロード
+------------------------------------------------- */
+.adobebox {
+	padding: 25px 28px;
+	border: solid 1px #dcdcdc;
+}
+.adobebox .tleft {
+	overflow: hidden;
+}
+.adobebox .imgright {
+	float: right;
+	width: 115px;
+	margin-left: 10px;
+}
+
+/* -------------------------------------------
+ ■now loading
+---------------------------------------------- */
+#now_loading {
+	z-index: 9998;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	padding: 10px;
+	opacity: .75;
+	border-radius: 15px;
+	background-color: #e0e0e0;
+}
+#now_loading img {
+	width: 100%;
+	height: 100%;
+}
+
+/* ------------------------------
+ タブレット・スマホ用コード
+------------------------------ */
+@media screen and (max-width: 767px) {
+	.cms_block {
+		margin-bottom: 50px;
+	}
+	.cms_image {
+		margin-bottom: 25px;
+	}
+	.flexBox.col4.capTop > .cms_image:last-child {
+		margin-bottom: 25px;
+	}
+	.cms_text {
+		margin-bottom: 25px;
+	}
+	.cms_fl {
+		float: none !important;
+		margin-bottom: 25px;
+	}
+	.cms_fr {
+		float: none !important;
+		margin-bottom: 25px;
+	}
+	#now_loading {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media screen and (max-width:640px) {
+	#now_loading img {
+		margin-left: 0 !important;
+	}
+	#now_loading {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 9998;
+		width: 75px;
+		height: 75px;
+		margin: 0 0 0 -13%;
+		padding-top: 10px;
+		padding-right: 7px;
+		padding-left: 7px !important;
+		opacity: .5;
+		border-radius: 15px;
+		background-color: #e0e0e0;
+	}
+}
